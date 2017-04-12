@@ -48,7 +48,9 @@ class WSHandler(tornado.websocket.WebSocketHandler):
       GPIO.output(18, False)
 
   def on_close(self):
-    print '[WS] Connection was closed.'
+    print '[WS] Connection was closed.' 
+    self.connections.discard(self)
+    print self.connections
 
 
 application = tornado.web.Application([
