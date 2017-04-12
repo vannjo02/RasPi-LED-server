@@ -1,0 +1,37 @@
+<html>
+
+<head>
+<!-- Latest compiled and minified CSS -->
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   <title> Art1 - Leds </title>
+</head>
+
+<body>
+
+<div> <!-- LEDs -->
+<h2>Play with LED's</h2>
+<p>Here you can turn on/off LED's connected to the Raspberry PI. </p>
+Red:
+<p>
+<input type="button" class="btn btn-block btn-lg btn-primary" id="green_on"  value="ON">
+<input type="button" class="btn btn-block btn-lg btn-default" id="green_off" value="OFF">
+</p>
+Blue:
+<p>
+<input type="button" class="btn btn-block btn-lg btn-primary" id="red_on"  value="ON">
+<input type="button" class="btn btn-block btn-lg btn-default" id="red_off" value="OFF">
+</p>
+</div>
+<hr>
+Websocket status:
+<br>
+<div id="ws-status"> Waiting... </div>
+
+<!-- Scripts -->
+
+<script src="{{ static_url("ws-client.js") }}"></script>
+
+</body>
+
+</html>
